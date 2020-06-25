@@ -1,21 +1,17 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {  BrowserRouter as Router , Switch, Route } from "react-router-dom";
+// import { createBrowserHistory } from "history";
+// import { Provider } from "mobx-react";
 
-import "./App.css"
-// import Login from "./components/Login";
-// import Register from "./components/Register";
-import Home from "./pages/Home";
-import { MobxStore } from "./store/MobxStore";
-
+import "./App.css";
+import Home from "pages/Home";
 function App() {
   return (
-    <>
-      <Route exact path="/">
-        <Home store={MobxStore} />
-      </Route>
-      {/* <Route exact path="/login" component={Login} />
-      <Route exact path="/register" component={Register} /> */}
-    </>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Home}  />
+      </Switch>
+    </Router>
   );
 }
 
