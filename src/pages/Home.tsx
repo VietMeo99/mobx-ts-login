@@ -12,11 +12,11 @@ export default class Home extends Component {
       <div>
         Home
         <div className="form_login_signUp">
-          <div className="tab_login_signUp d-flex">
-            <div className="login active d-flex justify-content-center align-items-center">
+          <div className="tab_login_signUp">
+            <div className="login">
               <p onClick={() => checkLogin}>Đăng nhập</p>
             </div>
-            <div className="signUp d-flex justify-content-center align-items-center">
+            <div className="signUp">
               <p onClick={() => checkRegister}>Đăng ký</p>
             </div>
           </div>
@@ -26,7 +26,7 @@ export default class Home extends Component {
             </h3>
           </div>
         </div>
-        
+
         <div>
           {login ? <Login /> : <Register />}
         </div>

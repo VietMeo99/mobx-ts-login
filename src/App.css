@@ -25,14 +25,17 @@ body {
 }
 .form_login_signUp {
   width: 500px;
-  height: 645px;
+  /* height: 645px; */
   z-index: 1050;
-  position: fixed;
-  background-color: #fff;
+  /* position: fixed; */
+  background-color: pink;
 }
 .form_login_signUp .tab_login_signUp {
   width: 100%;
+  display: flex;
 }
-.form_login_signUp .tab_login_signUp .active {
-  background-color: #fff;
+.login {
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
