@@ -25,17 +25,43 @@ body {
 }
 .form_login_signUp {
   width: 500px;
-  /* height: 645px; */
+  height: 645px;
   z-index: 1050;
-  /* position: fixed; */
-  background-color: pink;
+  position: fixed;
+  background-color: #fff;
 }
 .form_login_signUp .tab_login_signUp {
   width: 100%;
-  display: flex;
 }
-.login {
-  justify-content: center;
-  display: flex;
-  align-items: center;
+
+.d-flex {
+  display: -ms-flexbox!important;
+  display: flex!important;
+}
+.form_login_signUp .tab_login_signUp .login, .form_login_signUp .tab_login_signUp .signUp {
+  width: 250px;
+  height: 60px;
+  background-color: #f4f5f6;
+}
+.form_login_signUp .tab_login_signUp .login, .form_login_signUp .tab_login_signUp .signUp {
+  width: 250px;
+  height: 60px;
+  background-color: #f4f5f6;
+}
+.align-items-center {
+  -ms-flex-align: center!important;
+  align-items: center!important;
+}
+
+.justify-content-center {
+  -ms-flex-pack: center!important;
+  justify-content: center!important;
+}
+.form_login_signUp .title {
+  text-align: center;
+  padding: 16px 0;
+  margin: 0;
+}
+.form_login_signUp .form {
+  padding: 0 32px;
 }

@@ -12,7 +12,7 @@ const Login = () => {
         <Label for="examplePassword">Password</Label>
         <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
       </FormGroup>
-      <Button>Đăng nhập ngay</Button>
+      <Button className="btn btn-success">Đăng nhập ngay</Button>
     </Form>
   );
 }

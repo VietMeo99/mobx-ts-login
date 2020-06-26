@@ -1,18 +1,24 @@
-import { computed, observable } from "mobx";
+// import { computed, observable } from "mobx";
+// import { computed, observable } from "mobx-react";
 
 // @observable active: boolean = true;
 export class MobxStore {
-  @observable login: boolean = true;
-  @observable register: boolean = true;
-  @computed get checkRegister() {
-    if(this.login === true){
-      return !this.login
-    }
+  // @observable login: boolean = true;
+  // @observable register: boolean = true;
+
+  login: boolean;
+  register: boolean;
+  constructor() {
+    this.login = true;
+    this.register = true;
   }
-  @computed get checkLogin() {
-    if(this.login === false){
-      return !this.login
-    }
+  checkRegister() {
+    this.login = false;
+  }
+  checkLogin() {
+    console.log("checklogin");
+
+    this.login = true;
   }
 }
 
