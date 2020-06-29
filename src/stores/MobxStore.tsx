@@ -1,25 +1,25 @@
-// import { computed, observable } from "mobx";
-// import { computed, observable } from "mobx-react";
+import { computed, observable } from "mobx";
 
-// @observable active: boolean = true;
 export class MobxStore {
-  // @observable login: boolean = true;
-  // @observable register: boolean = true;
+  @observable login: boolean = true;
 
-  login: boolean;
-  register: boolean;
-  constructor() {
-    this.login = true;
-    this.register = true;
-  }
   checkRegister() {
     this.login = false;
   }
   checkLogin() {
-    console.log("checklogin");
-
     this.login = true;
+  }
+  @computed get action(){
+    return this.login
+  }
+
+   @observable count = 0;
+
+  //  giống excel thay đổi kết quả của ô nhớ theo các biến thay đổi , 0+ 2, 1+2, 2+2, 3+2 
+  @computed get getResult() {
+    return this.count + 2;
   }
 }
 
 export default new MobxStore();
+export const store =  new MobxStore();
